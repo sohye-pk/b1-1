@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Your Name</title>
+    <meta name="description" content="프론트엔드 개발자 포트폴리오 사이트입니다." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="header" id="header">
+      <nav class="nav container" aria-label="주 내비게이션">
+        <a href="#hero" class="nav__logo">
+          <span class="nav__logo-bracket">&lt;</span>YourName
+          <span class="nav__logo-bracket">/&gt;</span>
+        </a>
+
+        <ul class="nav__menu" id="nav-menu" role="list">
+          <li><a href="#about"   class="nav__link">About</a></li>
+          <li><a href="#skills"  class="nav__link">Skills</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <!-- Dark mode toggle -->
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="다크 모드 전환"
+            title="다크 모드 전환"
+          >
+            <i class="fa-solid fa-sun" id="theme-icon"></i>
+          </button>
+
+          <!-- Hamburger -->
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="메뉴 열기"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span class="hamburger__bar"></span>
+            <span class="hamburger__bar"></span>
+            <span class="hamburger__bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="hero" aria-label="히어로 섹션">
+        <div class="hero__bg-shape" aria-hidden="true"></div>
+        <div class="container hero__content">
+          <p class="hero__greeting">안녕하세요, 저는</p>
+          <h1 class="hero__name">Your Name</h1>
+          <p class="hero__title">
+            <span class="typing-prefix">저는&nbsp;</span>
+            <span class="typing-text" id="typing-text" aria-live="polite"></span>
+            <span class="typing-cursor" aria-hidden="true">|</span>
+          </p>
+          <p class="hero__desc">
+            사용자 경험을 최우선으로 생각하는 프론트엔드 개발자입니다.<br />
+            깔끔한 코드와 직관적인 UI로 가치 있는 서비스를 만들어 나갑니다.
+          </p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
+            <a href="#contact"  class="btn btn--outline">연락하기</a>
+          </div>
+          <div class="hero__scroll-hint" aria-hidden="true">
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="about section" id="about" aria-label="소개 섹션">
+        <div class="container">
+          <h2 class="section__title">About Me</h2>
+          <p class="section__subtitle">저를 소개합니다</p>
+
+          <div class="about__grid">
+            <div class="about__image-wrap">
+              <div class="about__image-frame">
+                <img
+                  src="images/profile.jpg"
+                  alt="프로필 사진 — Your Name"
+                  class="about__image"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="about__image-placeholder" aria-hidden="true">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__info">
+              <h3 class="about__name">Your Name</h3>
+              <p class="about__role">Frontend Developer</p>
+              <p class="about__bio">
+                웹의 가능성을 탐구하는 것을 좋아합니다. HTML/CSS/JavaScript를 기반으로
+                사용자가 실제로 사용하고 싶어지는 인터페이스를 만드는 데 집중합니다.
+                코드 한 줄 한 줄이 사용자 경험을 바꿀 수 있다는 믿음으로 개발합니다.
+              </p>
+
+              <ul class="about__details" role="list">
+                <li class="about__detail-item">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  <span>Seoul, Korea</span>
+                </li>
+                <li class="about__detail-item">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  <span>your.email@example.com</span>
+                </li>
+                <li class="about__detail-item">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>github.com/yourusername</span>
+                </li>
+              </ul>
+
+              <a
+                href="images/resume.pdf"
+                class="btn btn--primary"
+                download
+                aria-label="이력서 다운로드 (PDF)"
+              >
+                <i class="fa-solid fa-download" aria-hidden="true"></i>
+                이력서 다운로드
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SKILLS ===== -->
+      <section class="skills section" id="skills" aria-label="기술 스택 섹션">
+        <div class="container">
+          <h2 class="section__title">Skills</h2>
+          <p class="section__subtitle">제가 사용하는 기술 스택입니다</p>
+
+          <div class="skills__categories">
+
+            <article class="skills__card reveal">
+              <h3 class="skills__category-title">
+                <i class="fa-solid fa-code" aria-hidden="true"></i> Frontend
+              </h3>
+              <ul class="skills__list" role="list">
+                <li class="skill-item">
+                  <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                  <span>HTML5</span>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-bar__fill" style="--skill-level: 95%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                  <span>CSS3</span>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-bar__fill" style="--skill-level: 90%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <i class="fa-brands fa-js" aria-hidden="true"></i>
+                  <span>JavaScript</span>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-bar__fill" style="--skill-level: 85%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <i class="fa-brands fa-react" aria-hidden="true"></i>
+                  <span>React</span>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-bar__fill" style="--skill-level: 75%"></div>
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="skills__card reveal">
+              <h3 class="skills__category-title">
+                <i class="fa-solid fa-server" aria-hidden="true"></i> Tools & Etc
+              </h3>
+              <ul class="skills__list" role="list">
+                <li class="skill-item">
+                  <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
+                  <span>Git / GitHub</span>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-bar__fill" style="--skill-level: 85%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <i class="fa-brands fa-figma" aria-hidden="true"></i>
+                  <span>Figma</span>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-bar__fill" style="--skill-level: 70%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+                  <span>CLI / Shell</span>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-bar__fill" style="--skill-level: 65%"></div>
+                  </div>
+                </li>
+                <li class="skill-item">
+                  <i class="fa-brands fa-node-js" aria-hidden="true"></i>
+                  <span>Node.js</span>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-bar__fill" style="--skill-level: 60%"></div>
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section class="projects section" id="projects" aria-label="프로젝트 섹션">
+        <div class="container">
+          <h2 class="section__title">Projects</h2>
+          <p class="section__subtitle">GitHub에서 가져온 저장소 목록입니다</p>
+
+          <!-- Filter buttons (Bonus) -->
+          <div class="projects__filters" id="projects-filters" role="group" aria-label="언어별 필터">
+            <button class="filter-btn filter-btn--active" data-lang="all">All</button>
+          </div>
+
+          <!-- Dynamic area -->
+          <div class="projects__container" id="projects-container" aria-live="polite" aria-atomic="true">
+            <!-- 로딩/에러/카드가 JS로 렌더링됩니다 -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="contact section" id="contact" aria-label="문의 섹션">
+        <div class="container">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__subtitle">언제든지 연락 주세요</p>
+
+          <div class="contact__grid">
+            <div class="contact__info reveal">
+              <h3 class="contact__info-title">함께 이야기해요</h3>
+              <p class="contact__info-desc">
+                새로운 기회나 협업 제안이 있으시다면 편하게 연락주세요.
+                최대한 빠르게 답장 드리겠습니다.
+              </p>
+              <ul class="contact__links" role="list">
+                <li>
+                  <a href="mailto:your.email@example.com" class="contact__link" aria-label="이메일 보내기">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <span>your.email@example.com</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/yourusername"
+                    class="contact__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub 프로필 (새 탭 열림)"
+                  >
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span>github.com/yourusername</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact__form-wrap reveal">
+              <form class="contact__form" id="contact-form" novalidate aria-label="문의 폼">
+                <div class="form-group">
+                  <label for="name" class="form-label">이름 <span aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="홍길동"
+                    autocomplete="name"
+                    aria-required="true"
+                    aria-describedby="name-error"
+                  />
+                  <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">이메일 <span aria-hidden="true">*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="example@email.com"
+                    autocomplete="email"
+                    aria-required="true"
+                    aria-describedby="email-error"
+                  />
+                  <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">메시지 <span aria-hidden="true">*</span></label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-input form-textarea"
+                    placeholder="문의 내용을 입력해 주세요..."
+                    rows="5"
+                    aria-required="true"
+                    aria-describedby="message-error"
+                  ></textarea>
+                  <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                  메시지 보내기
+                </button>
+
+                <div class="form-success" id="form-success" role="status" aria-live="polite" hidden>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  메시지가 전송되었습니다! 빠른 시일 내에 답장 드리겠습니다.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__inner">
+        <p class="footer__copy">
+          &copy; <span id="footer-year"></span> Your Name. All rights reserved.
+        </p>
+        <ul class="footer__social" role="list" aria-label="소셜 링크">
+          <li>
+            <a
+              href="https://github.com/yourusername"
+              class="footer__social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub 프로필 (새 탭 열림)"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              class="footer__social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn 프로필 (새 탭 열림)"
+            >
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:your.email@example.com"
+              class="footer__social-link"
+              aria-label="이메일 보내기"
+            >
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scroll-to-top button -->
+    <button
+      class="scroll-top"
+      id="scroll-top"
+      aria-label="맨 위로 이동"
+      title="맨 위로 이동"
+      hidden
+    >
+      <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- JavaScript (defer) -->
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
