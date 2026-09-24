@@ -21,7 +21,7 @@
    1. 상수 / 설정
    ============================================================ */
 
-const GITHUB_USERNAME = 'yourusername';
+const GITHUB_USERNAME = 'sohye-pk';
 const GITHUB_API_URL  = `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`;
 
 // README 명시값
@@ -30,9 +30,9 @@ const SCROLL_TOP_THRESHOLD    = 300;  // 스크롤탑 버튼 표시 기준 (px)
 const OBSERVER_THRESHOLD      = 0.2;  // Intersection Observer threshold
 
 const TYPING_STRINGS = [
-  '프론트엔드 개발자',
-  'UI / UX 탐구자',
-  '코드로 가치를 만드는 사람',
+  'Full-Stack Developer',
+  '서비스의 흐름을 설계하는 사람',
+  '아이디어를 코드로 구현하는 사람',
 ];
 
 // Formspree 엔드포인트 (Bonus — 연동 시 본인 ID로 교체, 비우면 시뮬레이션)
