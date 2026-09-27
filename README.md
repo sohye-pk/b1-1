@@ -7,7 +7,7 @@
 
 ## 🔗 배포 URL
 
-**GitHub Pages:** `https://yourusername.github.io/portfolio`
+**GitHub Pages:** `https://sohye-pk.github.io/b1-1/`
 
 ---
 
@@ -15,7 +15,7 @@
 
 | 데스크톱 라이트 | 데스크톱 다크 | 모바일 |
 |:---:|:---:|:---:|
-| ![desktop-light](images/screenshot-desktop-light.png) | ![desktop-dark](images/screenshot-desktop-dark.png) | ![mobile](images/screenshot-mobile.png) |
+| ![desktop-light](images/desktop-light.png) | ![desktop-dark](images/desktop-dark.png) | ![mobile](images/mobile.png) |
 
 ---
 
