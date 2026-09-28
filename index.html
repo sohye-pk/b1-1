@@ -105,7 +105,6 @@
                   src="images/profile.png"
                   alt="프로필 사진 — Park SoHye"
                   class="about__image"
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
                 <div class="about__image-placeholder" aria-hidden="true">
                   <i class="fa-solid fa-user"></i>
@@ -375,7 +374,14 @@
       <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
     </button>
 
-    <!-- JavaScript (defer) -->
+    <!-- EmailJS SDK -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      defer
+    ></script>
+
+    <!-- JavaScript (defer) — config.js가 main.js보다 먼저 로드되어야 합니다 -->
+    <script src="js/config.js" defer></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>

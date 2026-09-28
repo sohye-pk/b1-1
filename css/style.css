@@ -581,6 +581,11 @@ button {
   object-fit: cover;
 }
 
+/* 이미지 로드 실패 시 JS로 클래스 토글 */
+.about__image--hidden {
+  display: none;
+}
+
 .about__image-placeholder {
   display: none;
   width: 100%;
@@ -590,6 +595,10 @@ button {
   background-color: var(--color-filter-bg);
   color: var(--color-primary);
   font-size: 5rem;
+}
+
+.about__image-placeholder.is-visible {
+  display: flex;
 }
 
 .about__info {
@@ -1013,10 +1022,20 @@ button {
 .form-error {
   font-size: var(--fs-xs);
   color: var(--color-accent);
-  min-height: 1em;
+  min-height: 1.2em;
   display: flex;
   align-items: center;
   gap: var(--sp-1);
+  transition: opacity var(--transition);
+}
+
+.form-error:empty {
+  opacity: 0;
+}
+
+.form-error i {
+  font-size: var(--fs-xs);
+  flex-shrink: 0;
 }
 
 .form-success {
@@ -1036,6 +1055,14 @@ button {
   color: var(--color-primary);
   font-size: var(--fs-xl);
   flex-shrink: 0;
+}
+
+/*
+ * hidden 속성이 있을 때는 반드시 숨김.
+ * (.form-success 의 display:flex 가 [hidden] 기본 스타일을 덮어쓰는 문제 방지)
+ */
+.form-success[hidden] {
+  display: none;
 }
 
 /* ============================================================
